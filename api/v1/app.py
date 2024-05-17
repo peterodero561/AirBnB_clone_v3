@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-""" Flask Application """
+""" Creating Flask Application for api folder"""
 from models import storage
 from api.v1.views import app_views
 from os import environ
@@ -17,7 +17,7 @@ cors = CORS(app, resources={r"/api/v1/*": {"origins": "*"}})
 
 @app.teardown_appcontext
 def close_db(error):
-    """ Close Storage """
+    """ Function to Close Storage incase of an error """
     storage.close()
 
 
@@ -40,7 +40,7 @@ Swagger(app)
 
 
 if __name__ == "__main__":
-    """ Main Function """
+    """ Main Function allows the module to run only when called"""
     host = environ.get('HBNB_API_HOST')
     port = environ.get('HBNB_API_PORT')
     if not host:

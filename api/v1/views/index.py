@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-""" Index """
+""" Index of index.py for the views to display the results"""
 from models.amenity import Amenity
 from models.city import City
 from models.place import Place
